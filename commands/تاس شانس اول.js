@@ -86,6 +86,16 @@ text: "🔄تاس شانس در حال بار گذاری می باشد...",
 show_alert: false
 })
 
+if(request.data){
+var message_id = request.message.message_id
+var chat_id = request.message.chat.id
+
+Api.deleteMessage({
+chat_id :  chat_id,
+message_id : message_id
+})
+}
+
 Api.sendDice({
 on_result:"تاس شانس دوم",
 emoji: "🎲"

@@ -1,5 +1,5 @@
 /*CMD
-  command: ۷۲۴ اول
+  command: کاغذی دوم اول
   help: 
   need_reply: 
   auto_retry_time: 
@@ -43,7 +43,7 @@ text: "❌کاربر گرامی [" + FirstName + "](tg://user?id=" + UserID + ")
 parse_mode: "Markdown",
 reply_markup: {inline_keyboard: [
 [{text: "👁مشاهده کانال اطلاع رسانی", url: "" + Channel_Url + ""}],
-[{text: "🔄بررسی دسترس بودن ربات", callback_data: "۷۲۴ اول"}]
+[{text: "🔄بررسی دسترس بودن ربات", callback_data: "کاغذی دوم اول"}]
 ]}
 });
 }
@@ -54,7 +54,7 @@ Bot.runCommand("تاریخ و زمان");
 
 HTTP.get({
 url: "" + WebService_Membership_Check + "=" + Channel_ID + "&user=" + UserID + "",
-success: '۷۲۴ اول'
+success: 'کاغذی دوم اول'
 });
 return
 }
@@ -118,14 +118,14 @@ reply_markup: {inline_keyboard: [
 else {
 Api.answerCallbackQuery({
 callback_query_id: request.id,
-text: "🔄۷۲۴ در حال بار گذاری می باشد...",
+text: "🔄کاغذی نوع دوم در حال بار گذاری می باشد...",
 show_alert: false
 })
 
 Diamond.remove(2);
 Api.editMessageText({
 message_id: request.message.message_id,
-text: "🌹کاربر گرامی [" + FirstName + "](tg://user?id=" + UserID + ") به بخش ۷۲۴ خوش آمدید.\n\n" + DateTime + "\n➖➖➖➖➖➖➖➖➖➖\n🙇‍♂️لطفا به پرسش هایی که از شما پرسیده می شود به درستی پاسخ دهید.",
+text: "🌹کاربر گرامی [" + FirstName + "](tg://user?id=" + UserID + ") به بخش کاغذی نوع دوم خوش آمدید.\n\n" + DateTime + "\n➖➖➖➖➖➖➖➖➖➖\n🙇‍♂️لطفا به پرسش هایی که از شما پرسیده می شود به درستی پاسخ دهید.",
 parse_mode: "Markdown",
 reply_markup: {inline_keyboard: [
 [{text: "🔙بازگشت به منوی قبل", callback_data: "رسید بانکی" }],
@@ -133,7 +133,7 @@ reply_markup: {inline_keyboard: [
 });
 
 Bot.run({
-command: "۷۲۴ دوم",
+command: "کاغذی دوم دوم",
 })
 }
 }
@@ -145,7 +145,7 @@ text: "⛔️کاربر گرامی [" + FirstName + "](tg://user?id=" + UserID +
 parse_mode: "Markdown",
 reply_markup: {inline_keyboard: [
 [{text: "📢عضویت در کانال", url: "" + Channel_Url + ""}],
-[{text: "🔄بررسی عضویت بودن کانال", callback_data: "۷۲۴ اول"}]
+[{text: "🔄بررسی عضویت بودن کانال", callback_data: "کاغذی دوم اول"}]
 ]}
 });
 }

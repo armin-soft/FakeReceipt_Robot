@@ -18,9 +18,8 @@ User.setProperty("Transfer_Credit_Diamond", data.message);
 let FirstName = data.user.first_name;
 let UserID = data.user.telegramid;
 let DateTime = Bot.getProperty("DateTime");
-var Blocked_UserID = Bot.getProperty(user.telegramid + "Blocked_UserID");
-let Transfer_Credit_Diamond = User.getProperty("Transfer_Credit_Diamond");
 let Transfer_Credit_UserID = User.getProperty("Transfer_Credit_UserID");
+let Transfer_Credit_Diamond = User.getProperty("Transfer_Credit_Diamond");
 let Item = parseFloat(Transfer_Credit_Diamond);
 
 let Diamond = Libs.ResourcesLib.userRes("Diamond");
@@ -91,11 +90,5 @@ reply_markup: {inline_keyboard: [
 ]}
 });
 
-Diamond.add(Item);
-Bot.runCommand("تاریخ و زمان");
-Api.sendMessage({
-chat_id: Transfer_Credit_UserID,
-text: "*🎁کاربر گرامی تبریک لحظاتی پیش تعداد " + (Decimal(Item)) + " عدد الماس به شما توسط کاربر " + FirstName + " انتقال یافت.*\n\n" + DateTime + "\n➖➖➖➖➖➖➖➖➖➖\n*💎الماس کنونی:" + (Decimal(Diamond.value())) + " " + (Currency(Diamond.value())) + "*",
-parse_mode: "Markdown",
-});
+Bot.runCommand("انتقال الماس چهارم");
 }
